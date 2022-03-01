@@ -130,8 +130,6 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 
-STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
-
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
@@ -144,4 +142,3 @@ EMAIL_HOST_USER = 'shivlanipalak@@gmail.com'
 EMAIL_HOST_PASSWORD = 'Spalak@2001'
 
 django_heroku.settings(locals())
-COMPRESS_ENABLED = os.environ.get('COMPRESS_ENABLED', False)
