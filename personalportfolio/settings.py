@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 import os
 from pathlib import Path
 import urllib
+import django_heroku
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -28,7 +29,7 @@ SECRET_KEY = 'vc)fgn2oaeul-r_s^uqwn_(_g9t@tsvcf@z#4#*zfj-%qz!75f'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['127.0.0.1', 'https://my-personalportfolio.herokuapp.com/']
 
 
 # Application definition
@@ -142,3 +143,5 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'shivlanipalak@@gmail.com'
 EMAIL_HOST_PASSWORD = 'Spalak@2001'
+
+django_heroku.settings(locals())
